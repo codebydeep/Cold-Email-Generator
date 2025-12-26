@@ -1,33 +1,42 @@
-# Cold Email Generator
+# ✉️ AI-Powered Cold Email Generator
 
-This repository contains a project designed to generate personalized cold emails tailored to the recipient. This tool is meant for businesses and individuals aiming to reach out to prospective clients, partners, or collaborators in a professional and engaging way.
+An intelligent cold email generation tool designed for **service-based companies**.  
+This application uses **Groq LLMs**, **LangChain**, and **Streamlit** to create highly personalized outreach emails by analyzing job listings directly from a company’s career page.
 
-## Features
-- Customizable template support
-- Data-driven personalization
-- Easy-to-use interface
+Users simply provide a careers page URL. The system:
+- Extracts relevant job openings
+- Understands role requirements using an LLM
+- Matches them with suitable portfolio projects stored in a **vector database**
+- Generates customized cold emails tailored to each role
 
-## Setup
-1. Clone the repository:
+---
+
+## 💡 Real-World Use Case
+
+Consider the following business scenario:
+
+- A software services firm such as **Atliq** already has experienced engineers available.
+- A business development executive from Atliq reaches out to Nike with a **targeted cold email**, offering a ready-to-deploy engineer whose skills closely match Nike’s requirements.
+
+This tool automates that outreach process with **precision and personalization**.
+
+---
+
+## ⚙️ Getting Started
+
+### 1. API Key Configuration
+Generate a Groq API key from: `https://console.groq.com/keys`
+
+Add your key:
+```.env
+GROQ_API_KEY=your_api_key_here
 ```
-git clone https://github.com/codebydeep/Cold-Email-Generator.git
-cd Cold-Email-Generator
-```
 
-2. Install the required dependencies:
+### 2. To get started, first install the dependencies using:
 ```
-npm install
+pip install -r requirements.txt
 ```
-
-3. Run the application:
+### 3. Run the atreamlit app -
 ```
-npm start
+streamlit run app/main.py
 ```
-
-## How to Use
-- Fill in the recipient details and template information.
-- Let the tool craft a personalized email draft with the content and details provided.
-
-## Contributions
-Contributions, issues, and feature requests are welcome!
-Feel free to check the `issues` page of this repository or fork the project and submit a Pull Request.
